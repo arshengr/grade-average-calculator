@@ -1,9 +1,11 @@
 # Grade Average Calculator
 
 CMPS 510 Principles and Concepts of Software Engineering — Final Project (Project #8)
+
 Student: Arshad Saeed · Instructor: Dr. Tsige Tessema · Bay Atlantic University
 
-**Live app:** https://arshengr.github.io/grade-average-calculator/
+  **Live app:** https://arshengr.github.io/grade-average-calculator/
+  
 **GitHub repo:** https://github.com/arshengr/grade-average-calculator
 
 ![Screenshot of the Grade Average Calculator](docs/screenshot.png)
