@@ -1,0 +1,9 @@
+{
+  "name": "grade-average-calculator",
+  "version": "1.0.0",
+  "description": "CMPS 510 final project: a simple Grade Average Calculator",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT"
+}

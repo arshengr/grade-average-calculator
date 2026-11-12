@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grade Average Calculator</title>
+  <meta name="description" content="Add your courses and grades to see your average and letter grade.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Grade Average Calculator</h1>
+    <p>Add your courses and grades. See your average and letter grade.</p>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="add-title">
+      <h2 id="add-title">Add a course</h2>
+      <form id="course-form" novalidate>
+        <div class="field">
+          <label for="course-name">Course name</label>
+          <input id="course-name" name="name" type="text" autocomplete="off" maxlength="60" placeholder="Software Engineering">
+        </div>
+        <div class="field">
+          <label for="course-grade">Grade (0 to 100)</label>
+          <input id="course-grade" name="grade" type="text" inputmode="decimal" autocomplete="off" placeholder="88">
+        </div>
+        <div class="field">
+          <label for="course-credits">Credits <span class="hint">(optional, default 1)</span></label>
+          <input id="course-credits" name="credits" type="text" inputmode="decimal" autocomplete="off" placeholder="3">
+        </div>
+        <button type="submit" class="primary">Add course</button>
+      </form>
+      <p id="form-message" class="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card result" aria-labelledby="result-title">
+      <h2 id="result-title">Your result</h2>
+      <div class="result-grid">
+        <div>
+          <span class="label">Average</span>
+          <span id="average-value" class="big">-</span>
+        </div>
+        <div>
+          <span class="label">Letter grade</span>
+          <span id="letter-value" class="big">-</span>
+        </div>
+      </div>
+      <p class="small">Based on <span id="course-count">0 courses</span>. Credits count as weights.</p>
+    </section>
+
+    <section class="card" aria-labelledby="list-title">
+      <h2 id="list-title">Your courses</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Course</th>
+              <th scope="col">Grade</th>
+              <th scope="col">Credits</th>
+              <th scope="col"><span class="sr-only">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody id="course-rows"></tbody>
+        </table>
+      </div>
+      <noscript><p class="message">This page needs JavaScript to work.</p></noscript>
+    </section>
+
+    <section class="card scale" aria-labelledby="scale-title">
+      <h2 id="scale-title">Grade scale</h2>
+      <p class="small">A: 90 to 100 &middot; B: 80 to 89.99 &middot; C: 70 to 79.99 &middot; D: 60 to 69.99 &middot; F: below 60</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>CMPS 510 Final Project &middot; Arshad Saeed</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
